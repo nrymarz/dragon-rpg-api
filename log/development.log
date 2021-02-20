@@ -13,3 +13,1954 @@ Migrating to CreateUsers (20210220033444)
   [1m[36mTRANSACTION (33.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-02-19 22:23:25 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/nrymarz/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/nrymarz/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.3ms | Allocations: 478)
+Completed 200 OK in 25ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 4122)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-02-19 22:23:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-02-19 22:23:31 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1159)
+
+
+Started GET "/users/squidbilly" for ::1 at 2021-02-19 22:23:39 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1451)
+
+
+Started GET "/" for ::1 at 2021-02-20 12:31:15 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/nrymarz/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/nrymarz/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.5ms | Allocations: 315)
+Completed 200 OK in 18ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 2444)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 12:31:20 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 967)
+
+
+Started GET "/users/!@" for ::1 at 2021-02-20 12:31:26 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"!@"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "!@"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1394)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 12:48:10 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 3091)
+
+
+Started GET "/users/!@" for ::1 at 2021-02-20 12:48:23 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"!@"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 23627)
+
+
+Started GET "/users" for ::1 at 2021-02-20 12:48:29 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 596)
+
+
+Started GET "/users" for ::1 at 2021-02-20 12:48:34 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 578)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 12:49:03 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 600)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 12:49:07 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 12:49:07 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 12:49:08 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 12:49:09 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 600)
+
+
+Started GET "/users" for ::1 at 2021-02-20 12:52:58 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 578)
+
+
+Started GET "/users" for ::1 at 2021-02-20 12:53:17 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 578)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 12:58:35 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 480)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 12:58:40 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 12:58:40 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 12:58:41 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 12:58:56 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 480)
+
+
+Started GET "/users" for ::1 at 2021-02-20 12:59:00 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 578)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 12:59:42 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 12:59:43 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 12:59:44 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 12:59:45 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:01:05 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 480)
+
+
+Started GET "/users" for ::1 at 2021-02-20 13:01:48 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 578)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:01:53 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users" for ::1 at 2021-02-20 13:04:02 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 578)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:04:17 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:04:21 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:04:44 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 480)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:06:53 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:07:10 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:07:11 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:07:12 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:07:13 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 582)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:07:46 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:08:00 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:10:47 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users" for ::1 at 2021-02-20 13:13:38 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 578)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:13:41 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 479)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:14:09 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:14:10 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:14:11 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:14:12 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:14:16 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:14:17 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:14:17 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users" for ::1 at 2021-02-20 13:15:41 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:18:57 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:19:13 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:19:15 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:20:18 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:20:26 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:20:28 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:20:29 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:20:30 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:20:31 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:20:31 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:20:33 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:20:44 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:20:48 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:20:52 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 479)
+
+
+Started GET "/users" for ::1 at 2021-02-20 13:21:10 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 582)
+
+
+Started GET "/users" for ::1 at 2021-02-20 13:21:34 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 578)
+
+
+Started GET "/users" for ::1 at 2021-02-20 13:22:28 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 578)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:23:42 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:26:30 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:27:00 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:27:30 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:27:33 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:27:34 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:27:36 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:27:37 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:27:39 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:32:49 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 3093)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:35:18 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 600)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:35:42 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 600)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:35:54 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/users/" for ::1 at 2021-02-20 13:37:43 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 3092)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:39:28 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 24915)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:45:00 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 961)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:45:53 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 496)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:53:14 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 961)
+
+
+Started POST "/users" for ::1 at 2021-02-20 13:53:35 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :player, :inventory[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Squidbilly"], ["created_at", "2021-02-20 19:53:35.589774"], ["updated_at", "2021-02-20 19:53:35.589774"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (16.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 33ms (Views: 0.3ms | ActiveRecord: 16.9ms | Allocations: 7296)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:53:50 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 479)
+
+
+Started POST "/users" for ::1 at 2021-02-20 13:53:57 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :player, :inventory[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Squidbilly"], ["created_at", "2021-02-20 19:53:57.159484"], ["updated_at", "2021-02-20 19:53:57.159484"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (26.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 33ms (Views: 0.3ms | ActiveRecord: 26.7ms | Allocations: 3743)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:54:06 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 479)
+
+
+Started POST "/users" for ::1 at 2021-02-20 13:54:06 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :player, :inventory[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Squidbilly"], ["created_at", "2021-02-20 19:54:06.253531"], ["updated_at", "2021-02-20 19:54:06.253531"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (23.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 30ms (Views: 0.3ms | ActiveRecord: 23.8ms | Allocations: 3704)
+
+
+Started GET "/users" for ::1 at 2021-02-20 13:54:38 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.2ms | Allocations: 965)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:57:32 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 479)
+
+
+Started POST "/users" for ::1 at 2021-02-20 13:57:32 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :player, :inventory[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Squidbilly"], ["created_at", "2021-02-20 19:57:32.355174"], ["updated_at", "2021-02-20 19:57:32.355174"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (20.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 27ms (Views: 0.3ms | ActiveRecord: 21.0ms | Allocations: 3740)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:57:37 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started POST "/users" for ::1 at 2021-02-20 13:57:37 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :player, :inventory[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Squidbilly"], ["created_at", "2021-02-20 19:57:37.239517"], ["updated_at", "2021-02-20 19:57:37.239517"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 12.4ms | Allocations: 3744)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 13:58:11 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started POST "/users" for ::1 at 2021-02-20 13:58:11 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :player, :inventory[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Squidbilly"], ["created_at", "2021-02-20 19:58:11.473865"], ["updated_at", "2021-02-20 19:58:11.473865"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (72.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 78ms (Views: 0.7ms | ActiveRecord: 73.0ms | Allocations: 3099)
+
+
+Started GET "/users" for ::1 at 2021-02-20 13:58:24 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1288)
+
+
+Started GET "/users/jennifer" for ::1 at 2021-02-20 13:58:33 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 479)
+
+
+Started POST "/users" for ::1 at 2021-02-20 13:58:48 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"jennifer", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"jennifer", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :player, :inventory[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "jennifer"], ["created_at", "2021-02-20 19:58:48.425787"], ["updated_at", "2021-02-20 19:58:48.425787"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (19.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 19.9ms | Allocations: 3738)
+
+
+Started GET "/users" for ::1 at 2021-02-20 14:08:11 -0600
+  
+SyntaxError (/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting =>
+...ttack,:spellPower], :inventory)
+...                              ^):
+  
+app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting =>
+Started GET "/users" for ::1 at 2021-02-20 14:08:59 -0600
+  
+SyntaxError (/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting =>
+...ttack,:spellPower], :inventory)
+...                              ^):
+  
+app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting =>
+Started GET "/users" for ::1 at 2021-02-20 14:10:49 -0600
+Processing by UsersController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 1.0ms | Allocations: 5380)
+
+
+Started GET "/users" for ::1 at 2021-02-20 14:10:58 -0600
+  
+SyntaxError (/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting =>
+...attack,:spellPower],:inventory)
+...                              ^):
+  
+app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting =>
+Started GET "/users" for ::1 at 2021-02-20 14:11:12 -0600
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 1.5ms | Allocations: 5593)
+
+
+Started GET "/users/jennifer2" for ::1 at 2021-02-20 14:11:36 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer2"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 630)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:11:36 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"jennifer2", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"jennifer2", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+[31mUnpermitted parameter: :inventory[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "jennifer2"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["created_at", "2021-02-20 20:11:36.142293"], ["updated_at", "2021-02-20 20:11:36.142293"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (24.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 31ms (Views: 0.3ms | ActiveRecord: 24.8ms | Allocations: 4020)
+
+
+Started GET "/users" for ::1 at 2021-02-20 14:11:48 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 1542)
+
+
+Started GET "/users" for ::1 at 2021-02-20 14:12:56 -0600
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 1.0ms | Allocations: 5667)
+
+
+Started GET "/users" for ::1 at 2021-02-20 14:13:23 -0600
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 1.1ms | Allocations: 5708)
+
+
+Started GET "/users/jennifer3" for ::1 at 2021-02-20 14:13:40 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 587)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:13:40 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"jennifer3", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"jennifer3", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :image, :selectedPotionIndex, :lockOut[0m
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "jennifer3"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["inventory", "{\"healthPotions\"=>[], \"manaPotions\"=>[]}"], ["created_at", "2021-02-20 20:13:40.076425"], ["updated_at", "2021-02-20 20:13:40.076425"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (36.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 44ms (Views: 0.4ms | ActiveRecord: 36.6ms | Allocations: 4039)
+
+
+Started GET "/users" for ::1 at 2021-02-20 14:13:51 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1694)
+
+
+Started GET "/users/jennifer4" for ::1 at 2021-02-20 14:15:28 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer4"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 479)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:15:28 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"jennifer4", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[{"name"=>"Health Potion", "image"=>{}}], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"jennifer4", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[{"name"=>"Health Potion", "image"=>{}}], "manaPotions"=>[], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :healthPotions, :image, :selectedPotionIndex, :lockOut[0m
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "jennifer4"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["inventory", "{\"manaPotions\"=>[]}"], ["created_at", "2021-02-20 20:15:28.997678"], ["updated_at", "2021-02-20 20:15:28.997678"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (23.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 32ms (Views: 0.4ms | ActiveRecord: 24.4ms | Allocations: 4081)
+
+
+Started GET "/users" for ::1 at 2021-02-20 14:15:47 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1844)
+
+
+Started GET "/users/jennifer5" for ::1 at 2021-02-20 14:16:28 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer5"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:16:28 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"jennifer5", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[{"name"=>"Health Potion", "image"=>{}}, {"name"=>"Health Potion", "image"=>{}}], "manaPotions"=>[{"name"=>"Mana Potion", "image"=>{}}], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"jennifer5", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>[{"name"=>"Health Potion", "image"=>{}}, {"name"=>"Health Potion", "image"=>{}}], "manaPotions"=>[{"name"=>"Mana Potion", "image"=>{}}], "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :healthPotions, :manaPotions, :image, :selectedPotionIndex, :lockOut[0m
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "jennifer5"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["inventory", "{}"], ["created_at", "2021-02-20 20:16:28.846797"], ["updated_at", "2021-02-20 20:16:28.846797"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 28ms (Views: 0.8ms | ActiveRecord: 21.1ms | Allocations: 3169)
+
+
+Started GET "/users" for ::1 at 2021-02-20 14:16:49 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1988)
+
+
+Started GET "/users/jennifer6" for ::1 at 2021-02-20 14:22:25 -0600
+  
+SyntaxError (/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:34: syntax error, unexpected ','
+...ame,inventory: [healthPotions:,manaPotions:], player: [:leve...
+...                              ^
+/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting end
+...,:maxMana,:attack,:spellPower])
+...                              ^):
+  
+app/controllers/users_controller.rb:34: syntax error, unexpected ','
+app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting end
+app/controllers/users_controller.rb:34: syntax error, unexpected ','
+app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting end
+Started POST "/users" for ::1 at 2021-02-20 14:22:25 -0600
+  
+SyntaxError (/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:34: syntax error, unexpected ','
+...ame,inventory: [healthPotions:,manaPotions:], player: [:leve...
+...                              ^
+/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting end
+...,:maxMana,:attack,:spellPower])
+...                              ^):
+  
+app/controllers/users_controller.rb:34: syntax error, unexpected ','
+app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting end
+app/controllers/users_controller.rb:34: syntax error, unexpected ','
+app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting end
+Started GET "/users" for ::1 at 2021-02-20 14:22:42 -0600
+  
+SyntaxError (/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:34: syntax error, unexpected ','
+...ame,inventory: [healthPotions:,manaPotions:], player: [:leve...
+...                              ^
+/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting end
+...,:maxMana,:attack,:spellPower])
+...                              ^):
+  
+app/controllers/users_controller.rb:34: syntax error, unexpected ','
+app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting end
+app/controllers/users_controller.rb:34: syntax error, unexpected ','
+app/controllers/users_controller.rb:34: syntax error, unexpected ')', expecting end
+Started GET "/users" for ::1 at 2021-02-20 14:23:11 -0600
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 1.4ms | Allocations: 6156)
+
+
+Started GET "/users/jennifer6" for ::1 at 2021-02-20 14:23:19 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer6"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 587)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:23:19 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"jennifer6", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>2, "manaPotions"=>1, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"jennifer6", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>2, "manaPotions"=>1, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :image, :selectedPotionIndex, :lockOut[0m
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "jennifer6"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["inventory", "{\"healthPotions\"=>2, \"manaPotions\"=>1}"], ["created_at", "2021-02-20 20:23:19.434320"], ["updated_at", "2021-02-20 20:23:19.434320"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (23.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 30ms (Views: 0.3ms | ActiveRecord: 24.1ms | Allocations: 4042)
+
+
+Started GET "/users" for ::1 at 2021-02-20 14:23:23 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 2140)
+
+
+Started GET "/users/jennifer7" for ::1 at 2021-02-20 14:25:45 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer7"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:25:45 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"jennifer7", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"jennifer7", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :image, :selectedPotionIndex, :lockOut[0m
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "jennifer7"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["inventory", "{\"healthPotions\"=>0, \"manaPotions\"=>0}"], ["created_at", "2021-02-20 20:25:45.684603"], ["updated_at", "2021-02-20 20:25:45.684603"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (23.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 29ms (Views: 0.3ms | ActiveRecord: 23.6ms | Allocations: 4032)
+
+
+Started GET "/users" for ::1 at 2021-02-20 14:25:59 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 2292)
+
+
+Started GET "/users/jennifer7" for ::1 at 2021-02-20 14:27:39 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer7"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 630)
+
+
+Started GET "/users/user" for ::1 at 2021-02-20 14:27:45 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"user"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "user"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 479)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:27:45 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"user", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"user", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :image, :selectedPotionIndex, :lockOut[0m
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "user"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["inventory", "{\"healthPotions\"=>0, \"manaPotions\"=>0}"], ["created_at", "2021-02-20 20:27:45.437529"], ["updated_at", "2021-02-20 20:27:45.437529"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 14.1ms | Allocations: 3994)
+
+
+Started GET "/users/user" for ::1 at 2021-02-20 14:28:31 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"user"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "user"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 630)
+
+
+Started GET "/users/user" for ::1 at 2021-02-20 14:29:33 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"user"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "user"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 630)
+
+
+Started GET "/users/user" for ::1 at 2021-02-20 14:29:39 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"user"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "user"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 630)
+
+
+Started GET "/users/sdfsdfsdfsdfsdfsdf" for ::1 at 2021-02-20 14:30:19 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"sdfsdfsdfsdfsdfsdf"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "sdfsdfsdfsdfsdfsdf"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 14:32:47 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 479)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:33:49 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :image, :selectedPotionIndex, :lockOut[0m
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Squidbilly"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["inventory", "{\"healthPotions\"=>0, \"manaPotions\"=>0}"], ["created_at", "2021-02-20 20:33:49.266346"], ["updated_at", "2021-02-20 20:33:49.266346"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (33.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 41ms (Views: 0.4ms | ActiveRecord: 34.1ms | Allocations: 4032)
+
+
+Started GET "/users/user" for ::1 at 2021-02-20 14:33:58 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"user"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "user"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms | Allocations: 631)
+
+
+Started GET "/users/sdfsdfsdfweaf2234" for ::1 at 2021-02-20 14:34:16 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"sdfsdfsdfweaf2234"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "sdfsdfsdfweaf2234"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:34:16 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"sdfsdfsdfweaf2234", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"sdfsdfsdfweaf2234", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :image, :selectedPotionIndex, :lockOut[0m
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "sdfsdfsdfweaf2234"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["inventory", "{\"healthPotions\"=>0, \"manaPotions\"=>0}"], ["created_at", "2021-02-20 20:34:16.928477"], ["updated_at", "2021-02-20 20:34:16.928477"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (21.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 29ms (Views: 0.3ms | ActiveRecord: 22.1ms | Allocations: 4032)
+
+
+Started GET "/users/fsdfwefwr234" for ::1 at 2021-02-20 14:37:01 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"fsdfwefwr234"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "fsdfwefwr234"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 479)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:37:01 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"fsdfwefwr234", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"fsdfwefwr234", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :image, :selectedPotionIndex, :lockOut[0m
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "fsdfwefwr234"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["inventory", "{\"healthPotions\"=>0, \"manaPotions\"=>0}"], ["created_at", "2021-02-20 20:37:01.532223"], ["updated_at", "2021-02-20 20:37:01.532223"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (22.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 30ms (Views: 0.3ms | ActiveRecord: 23.1ms | Allocations: 4034)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 14:39:55 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:39:55 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :image, :selectedPotionIndex, :lockOut[0m
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Squidbilly"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["inventory", "{\"healthPotions\"=>0, \"manaPotions\"=>0}"], ["created_at", "2021-02-20 20:39:55.750173"], ["updated_at", "2021-02-20 20:39:55.750173"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (29.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 36ms (Views: 0.3ms | ActiveRecord: 29.9ms | Allocations: 4032)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 14:40:09 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:40:09 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :image, :selectedPotionIndex, :lockOut[0m
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Squidbilly"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["inventory", "{\"healthPotions\"=>0, \"manaPotions\"=>0}"], ["created_at", "2021-02-20 20:40:09.147501"], ["updated_at", "2021-02-20 20:40:09.147501"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (17.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 25ms (Views: 0.3ms | ActiveRecord: 18.3ms | Allocations: 4032)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (26.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "player" varchar, "inventory" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (36.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (20.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210220033444)[0m
+  [1m[35m (20.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-20 20:41:19.562053"], ["updated_at", "2021-02-20 20:41:19.562053"]]
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "163ad70f371c321f3dc7f568f365487c5672eacb"], ["created_at", "2021-02-20 20:41:19.586392"], ["updated_at", "2021-02-20 20:41:19.586392"]]
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (22.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "player" varchar, "inventory" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (10.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210220033444)[0m
+  [1m[35m (15.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-20 20:41:19.679478"], ["updated_at", "2021-02-20 20:41:19.679478"]]
+  [1m[36mTRANSACTION (29.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-02-20 20:41:19.714901"], ["key", "environment"]]
+  [1m[36mTRANSACTION (35.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "163ad70f371c321f3dc7f568f365487c5672eacb"], ["created_at", "2021-02-20 20:41:19.757779"], ["updated_at", "2021-02-20 20:41:19.757779"]]
+  [1m[36mTRANSACTION (26.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users" for ::1 at 2021-02-20 14:41:43 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 3087)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 14:43:01 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 24916)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:43:01 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :image, :selectedPotionIndex, :lockOut[0m
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Squidbilly"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["inventory", "{\"healthPotions\"=>0, \"manaPotions\"=>0}"], ["created_at", "2021-02-20 20:43:01.512024"], ["updated_at", "2021-02-20 20:43:01.512024"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (41.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 64ms (Views: 0.4ms | ActiveRecord: 42.2ms | Allocations: 7600)
+
+
+Started GET "/users" for ::1 at 2021-02-20 14:43:04 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 743)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 14:49:08 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 26083)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:49:08 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :image, :selectedPotionIndex, :lockOut[0m
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Squidbilly"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["inventory", "{\"healthPotions\"=>0, \"manaPotions\"=>0}"], ["created_at", "2021-02-20 20:49:08.984067"], ["updated_at", "2021-02-20 20:49:08.984067"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (16.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 35ms (Views: 0.3ms | ActiveRecord: 19.1ms | Allocations: 7602)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 14:49:37 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 496)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:49:37 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :image, :selectedPotionIndex, :lockOut[0m
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Squidbilly"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["inventory", "{\"healthPotions\"=>0, \"manaPotions\"=>0}"], ["created_at", "2021-02-20 20:49:37.735180"], ["updated_at", "2021-02-20 20:49:37.735180"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (34.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 41ms (Views: 0.4ms | ActiveRecord: 34.8ms | Allocations: 3435)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 14:52:10 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 496)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:52:10 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :image, :selectedPotionIndex, :lockOut[0m
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Squidbilly"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["inventory", "{\"healthPotions\"=>0, \"manaPotions\"=>0}"], ["created_at", "2021-02-20 20:52:10.691578"], ["updated_at", "2021-02-20 20:52:10.691578"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (34.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 41ms (Views: 0.3ms | ActiveRecord: 34.8ms | Allocations: 4038)
+
+
+Started GET "/users" for ::1 at 2021-02-20 14:52:14 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1222)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 14:52:53 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 14:53:30 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 475)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 14:54:06 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 1.0ms | Allocations: 4806)
+
+
+Started POST "/users" for ::1 at 2021-02-20 14:55:55 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"Squidbilly", "player"=>{"level"=>1, "maxHp"=>100, "hp"=>100, "maxMana"=>50, "mana"=>50, "attack"=>10, "spellPower"=>15, "xp"=>0, "speed"=>100, "x"=>380, "y"=>275, "img"=>{}, "frameIndex"=>[0, 0], "frame"=>0, "touchingEdge"=>false}, "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :image, :selectedPotionIndex, :lockOut[0m
+[31mUnpermitted parameters: :hp, :mana, :speed, :x, :y, :img, :frameIndex, :frame, :touchingEdge[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "squidbilly"], ["player", "{\"level\"=>1, \"xp\"=>0, \"maxHp\"=>100, \"maxMana\"=>50, \"attack\"=>10, \"spellPower\"=>15}"], ["inventory", "{\"healthPotions\"=>0, \"manaPotions\"=>0}"], ["created_at", "2021-02-20 20:55:55.567132"], ["updated_at", "2021-02-20 20:55:55.567132"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (62.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 75ms (Views: 0.4ms | ActiveRecord: 64.5ms | Allocations: 7077)
+
+
+Started GET "/users" for ::1 at 2021-02-20 14:56:17 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1371)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 14:56:20 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 739)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 14:56:38 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 647)
+
+
+Started GET "/users" for ::1 at 2021-02-20 14:56:43 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1339)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 14:57:09 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 630)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 14:57:14 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 630)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 14:57:41 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 630)
+
+
+Started GET "/users" for ::1 at 2021-02-20 15:08:17 -0600
+  
+SyntaxError (/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:9: syntax error, unexpected '}', expecting =>
+...user.to_json(include: {:player})
+...                              ^
+/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:37: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:9: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:37: syntax error, unexpected end-of-input, expecting end
+app/controllers/users_controller.rb:9: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:37: syntax error, unexpected end-of-input, expecting end
+Started GET "/users" for ::1 at 2021-02-20 15:08:49 -0600
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 1.0ms | Allocations: 5315)
+
+
+Started GET "/users/squidbilly" for ::1 at 2021-02-20 15:08:55 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"squidbilly"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 1652)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for #<String:0x00007f9129311c28>):
+  
+app/controllers/users_controller.rb:9:in `show'
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:11:18 -0600
+  
+SyntaxError (/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:35: syntax error, unexpected ')', expecting =>
+...Potions,:manaPotions], :player)
+...                              ^):
+  
+app/controllers/users_controller.rb:35: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:35: syntax error, unexpected ')', expecting =>
+Started POST "/users" for ::1 at 2021-02-20 15:11:18 -0600
+  
+SyntaxError (/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:35: syntax error, unexpected ')', expecting =>
+...Potions,:manaPotions], :player)
+...                              ^):
+  
+app/controllers/users_controller.rb:35: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:35: syntax error, unexpected ')', expecting =>
+Started GET "/users/squidbilly" for ::1 at 2021-02-20 15:11:29 -0600
+  
+SyntaxError (/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:35: syntax error, unexpected ')', expecting =>
+...Potions,:manaPotions], :player)
+...                              ^):
+  
+app/controllers/users_controller.rb:35: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:35: syntax error, unexpected ')', expecting =>
+Started GET "/users/squidbilly" for ::1 at 2021-02-20 15:11:51 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"squidbilly"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 2.2ms | Allocations: 4836)
+
+
+Started GET "/users" for ::1 at 2021-02-20 15:11:55 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1356)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (21.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "player" varchar, "inventory" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (18.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (9.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210220033444)[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-20 21:12:10.229085"], ["updated_at", "2021-02-20 21:12:10.229085"]]
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "163ad70f371c321f3dc7f568f365487c5672eacb"], ["created_at", "2021-02-20 21:12:10.247256"], ["updated_at", "2021-02-20 21:12:10.247256"]]
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (18.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "player" varchar, "inventory" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (31.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (35.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210220033444)[0m
+  [1m[35m (40.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-20 21:12:10.405225"], ["updated_at", "2021-02-20 21:12:10.405225"]]
+  [1m[36mTRANSACTION (29.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-02-20 21:12:10.467472"], ["key", "environment"]]
+  [1m[36mTRANSACTION (25.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "163ad70f371c321f3dc7f568f365487c5672eacb"], ["created_at", "2021-02-20 21:12:10.498347"], ["updated_at", "2021-02-20 21:12:10.498347"]]
+  [1m[36mTRANSACTION (29.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users" for ::1 at 2021-02-20 15:12:32 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 3087)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 15:12:43 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 23620)
+
+
+Started POST "/users" for ::1 at 2021-02-20 15:12:43 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "player"=>"{\"level\":1,\"maxHp\":100,\"hp\":100,\"maxMana\":50,\"mana\":50,\"attack\":10,\"spellPower\":15,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}, "user"=>{"name"=>"Squidbilly", "player"=>"{\"level\":1,\"maxHp\":100,\"hp\":100,\"maxMana\":50,\"mana\":50,\"attack\":10,\"spellPower\":15,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>{"healthPotions"=>0, "manaPotions"=>0, "image"=>{}, "selectedPotionIndex"=>0, "lockOut"=>false}}}
+[31mUnpermitted parameters: :image, :selectedPotionIndex, :lockOut[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "squidbilly"], ["player", "{\"level\":1,\"maxHp\":100,\"hp\":100,\"maxMana\":50,\"mana\":50,\"attack\":10,\"spellPower\":15,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\"=>0, \"manaPotions\"=>0}"], ["created_at", "2021-02-20 21:12:43.641181"], ["updated_at", "2021-02-20 21:12:43.641181"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (59.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 75ms (Views: 0.4ms | ActiveRecord: 60.4ms | Allocations: 7435)
+
+
+Started GET "/users" for ::1 at 2021-02-20 15:12:54 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 774)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 15:15:04 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 4830)
+
+
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:15:25 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 496)
+
+
+Started POST "/users" for ::1 at 2021-02-20 15:15:25 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"jennifer", "player"=>"{\"level\":1,\"maxHp\":100,\"hp\":100,\"maxMana\":50,\"mana\":50,\"attack\":10,\"spellPower\":15,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}", "user"=>{"name"=>"jennifer", "player"=>"{\"level\":1,\"maxHp\":100,\"hp\":100,\"maxMana\":50,\"mana\":50,\"attack\":10,\"spellPower\":15,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "jennifer"], ["player", "{\"level\":1,\"maxHp\":100,\"hp\":100,\"maxMana\":50,\"mana\":50,\"attack\":10,\"spellPower\":15,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["created_at", "2021-02-20 21:15:25.426615"], ["updated_at", "2021-02-20 21:15:25.426615"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (47.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 54ms (Views: 0.3ms | ActiveRecord: 47.9ms | Allocations: 3764)
+
+
+Started GET "/users" for ::1 at 2021-02-20 15:15:32 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 873)
+
+
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:15:42 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 614)
+
+
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:17:45 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 615)
+
+
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:17:58 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:18:53 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started POST "/users/jennifer" for ::1 at 2021-02-20 15:19:11 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/users/jennifer"):
+  
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:22:40 -0600
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:22:40 -0600
+Started GET "/users" for ::1 at 2021-02-20 15:22:40 -0600
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:22:40 -0600
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:22:40 -0600
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer"}
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Processing by UsersController#show as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer"}
+  Parameters: {"id"=>"jennifer"}
+  Parameters: {"id"=>"jennifer"}
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 1.8ms | Allocations: 5544)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 4047)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 41ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 36835)
+
+
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 29162)
+
+
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 24ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 9267)
+
+
+Started GET "/users" for ::1 at 2021-02-20 15:22:46 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 0.9ms | Allocations: 7240)
+
+
+Started GET "/users" for ::1 at 2021-02-20 15:22:48 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 874)
+
+
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:22:55 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 23276)
+
+
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:23:13 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 631)
+
+
+Started POST "/users/jennifer" for ::1 at 2021-02-20 15:23:47 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/users/jennifer"):
+  
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:24:13 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started PATCH "/users/jennifer" for ::1 at 2021-02-20 15:24:40 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"name"=>"jennifer", "player"=>"{\"level\":1,\"maxHp\":100,\"hp\":100,\"maxMana\":50,\"mana\":50,\"attack\":10,\"spellPower\":15,\"xp\":0,\"speed\":100,\"x\":389.4000000000001,\"y\":319.1000000000006,\"img\":{},\"frameIndex\":[1,3],\"frame\":688,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":1,\"manaPotions\":2,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}", "id"=>"jennifer", "user"=>{"name"=>"jennifer", "player"=>"{\"level\":1,\"maxHp\":100,\"hp\":100,\"maxMana\":50,\"mana\":50,\"attack\":10,\"spellPower\":15,\"xp\":0,\"speed\":100,\"x\":389.4000000000001,\"y\":319.1000000000006,\"img\":{},\"frameIndex\":[1,3],\"frame\":688,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":1,\"manaPotions\":2,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "player" = ?, "inventory" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["player", "{\"level\":1,\"maxHp\":100,\"hp\":100,\"maxMana\":50,\"mana\":50,\"attack\":10,\"spellPower\":15,\"xp\":0,\"speed\":100,\"x\":389.4000000000001,\"y\":319.1000000000006,\"img\":{},\"frameIndex\":[1,3],\"frame\":688,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":1,\"manaPotions\":2,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["updated_at", "2021-02-20 21:24:40.140631"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (32.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+Completed 200 OK in 40ms (Views: 0.2ms | ActiveRecord: 33.2ms | Allocations: 4346)
+
+
+Started GET "/users" for ::1 at 2021-02-20 15:24:47 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 856)
+
+
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:24:57 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 614)
+
+
+Started PATCH "/users/jennifer" for ::1 at 2021-02-20 15:33:13 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"name"=>"jennifer", "player"=>"{\"level\":1,\"maxHp\":100,\"hp\":1,\"maxMana\":50,\"mana\":50,\"attack\":10,\"spellPower\":15,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[2,3],\"frame\":5193,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":2,\"manaPotions\":2,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}", "id"=>"jennifer", "user"=>{"name"=>"jennifer", "player"=>"{\"level\":1,\"maxHp\":100,\"hp\":1,\"maxMana\":50,\"mana\":50,\"attack\":10,\"spellPower\":15,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[2,3],\"frame\":5193,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":2,\"manaPotions\":2,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:23:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "player" = ?, "inventory" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["player", "{\"level\":1,\"maxHp\":100,\"hp\":1,\"maxMana\":50,\"mana\":50,\"attack\":10,\"spellPower\":15,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[2,3],\"frame\":5193,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":2,\"manaPotions\":2,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["updated_at", "2021-02-20 21:33:13.238730"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+Completed 200 OK in 24ms (Views: 0.2ms | ActiveRecord: 16.8ms | Allocations: 4030)
+
+
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:33:19 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 632)
+
+
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:34:14 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 614)
+
+
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:36:18 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started GET "/users/jennifer" for ::1 at 2021-02-20 15:37:08 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"jennifer"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 614)
+
+
+Started PATCH "/users/jennifer" for ::1 at 2021-02-20 15:37:10 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"name"=>"jennifer", "player"=>"{\"level\":1,\"hp\":1,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[3,0],\"frame\":39,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":2,\"manaPotions\":2,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}", "id"=>"jennifer", "user"=>{"name"=>"jennifer", "player"=>"{\"level\":1,\"hp\":1,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[3,0],\"frame\":39,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":2,\"manaPotions\":2,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "jennifer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "player" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["player", "{\"level\":1,\"hp\":1,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[3,0],\"frame\":39,\"touchingEdge\":false}"], ["updated_at", "2021-02-20 21:37:10.006273"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (20.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+Completed 200 OK in 27ms (Views: 0.2ms | ActiveRecord: 21.3ms | Allocations: 3555)
+
+
