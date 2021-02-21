@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     def update
         user = User.find_by(name: params[:id].parameterize)
         if user
-            user.update(user_params)
+            user.update(name: user_params[:name].parameterize, player: user_params[:player], inventory: user_params[:inventory])
             render json: {message: "User updated"},status: 200
         else
             render json: {error: "Unable to update user"}, status: 400
