@@ -10,7 +10,9 @@ class UsersController < ApplicationController
     end
 
     def create
-        user = User.new(user_params)
+        user = User.new(name: user_params[:name])
+        save = Gamesave.new(user_params[:save])
+        user.saves.push(save)
         user.name = user.name.parameterize
         if user.save
             render json: user
@@ -22,7 +24,8 @@ class UsersController < ApplicationController
     def update
         user = User.find_by(name: params[:id].parameterize)
         if user
-            user.update(name: user_params[:name].parameterize, player: user_params[:player], inventory: user_params[:inventory])
+            save = Gamesave.new(user_params[:save])
+            user.saves.push(save)
             render json: {message: "User updated"},status: 200
         else
             render json: {error: "Unable to update user"}, status: 400
@@ -32,6 +35,6 @@ class UsersController < ApplicationController
     private 
 
     def user_params
-        params.require(:user).permit(:name,:player,:inventory)
+        params.require(:user).permit(:name,save:[:player,:inventory])
     end
 end
