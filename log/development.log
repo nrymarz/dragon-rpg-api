@@ -3514,3 +3514,512 @@ Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.8ms | Allocations: 4487)
 
   [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mGamesave Load (0.2ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/nrymarz" for ::1 at 2021-03-03 19:29:09 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"nrymarz"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "nrymarz"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 27217)
+
+
+Started POST "/users" for ::1 at 2021-03-03 19:29:09 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"nrymarz", "save"=>{"player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}, "user"=>{"name"=>"nrymarz"}}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.7ms | Allocations: 7516)
+
+
+  
+NoMethodError (undefined method `saves' for #<User:0x00007f528156cb30>
+Did you mean?  save
+               save!):
+  
+app/controllers/users_controller.rb:15:in `create'
+Started GET "/users" for ::1 at 2021-03-03 19:29:43 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 6849)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-03-03 19:29:46 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 23138)
+
+
+Started POST "/users" for ::1 at 2021-03-03 19:29:46 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "save"=>{"player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}, "user"=>{"name"=>"Squidbilly"}}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.6ms | Allocations: 5306)
+
+
+  
+NameError (uninitialized constant User::Gamesafe):
+  
+app/controllers/users_controller.rb:15:in `create'
+Started GET "/users" for ::1 at 2021-03-03 19:45:16 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 4.6ms | ActiveRecord: 0.8ms | Allocations: 6907)
+
+
+Started GET "/users/user" for ::1 at 2021-03-03 19:45:21 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"user"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "user"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 23138)
+
+
+Started POST "/users" for ::1 at 2021-03-03 19:45:21 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"user", "save"=>{"player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}, "user"=>{"name"=>"user"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "user"], ["created_at", "2021-03-04 01:45:21.390485"], ["updated_at", "2021-03-04 01:45:21.390485"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mGamesave Create (0.3ms)[0m  [1m[32mINSERT INTO "gamesaves" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 2], ["created_at", "2021-03-04 01:45:21.393632"], ["updated_at", "2021-03-04 01:45:21.393632"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (28.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+Completed 200 OK in 89ms (Views: 0.3ms | ActiveRecord: 29.2ms | Allocations: 11633)
+
+
+Started GET "/users" for ::1 at 2021-03-03 19:45:27 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 808)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mGamesave Load (0.1ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/Squidbilly" for ::1 at 2021-03-03 19:49:23 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 27216)
+
+
+Started POST "/users" for ::1 at 2021-03-03 19:49:23 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "save"=>{"player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}, "user"=>{"name"=>"Squidbilly"}}
+  [1m[36mGamesave Load (0.2ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 423703ms (ActiveRecord: 0.9ms | Allocations: 77142)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:16:in `create'
+Started GET "/users/Squidbilly" for ::1 at 2021-03-03 19:56:41 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 27213)
+
+
+Started POST "/users" for ::1 at 2021-03-03 19:56:41 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "gamesave"=>{"player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}, "user"=>{"name"=>"Squidbilly"}}
+Completed 500 Internal Server Error in 40203ms (ActiveRecord: 0.7ms | Allocations: 62151)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:16:in `create'
+Started GET "/users/Squidbilly" for ::1 at 2021-03-03 19:57:36 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 27216)
+
+
+Started POST "/users" for ::1 at 2021-03-03 19:57:37 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Squidbilly", "gamesave"=>{"player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}, "user"=>{"name"=>"Squidbilly"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "squidbilly"], ["created_at", "2021-03-04 01:57:37.042802"], ["updated_at", "2021-03-04 01:57:37.042802"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mGamesave Create (0.3ms)[0m  [1m[32mINSERT INTO "gamesaves" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 3], ["created_at", "2021-03-04 01:57:37.046079"], ["updated_at", "2021-03-04 01:57:37.046079"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (17.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+Completed 200 OK in 51ms (Views: 0.3ms | ActiveRecord: 19.1ms | Allocations: 12592)
+
+
+Started GET "/users" for ::1 at 2021-03-03 19:57:40 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 944)
+
+
+Started GET "/users" for ::1 at 2021-03-03 19:57:43 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 914)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-03-03 19:58:32 -0600
+  
+SyntaxError (/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:38: syntax error, unexpected ')', expecting =>
+...e: [:player,:inventory],:name )
+...                              ^):
+  
+app/controllers/users_controller.rb:38: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:38: syntax error, unexpected ')', expecting =>
+Started POST "/users" for ::1 at 2021-03-03 19:58:32 -0600
+  
+SyntaxError (/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:38: syntax error, unexpected ')', expecting =>
+...e: [:player,:inventory],:name )
+...                              ^):
+  
+app/controllers/users_controller.rb:38: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:38: syntax error, unexpected ')', expecting =>
+Started GET "/users/nrymarz" for ::1 at 2021-03-03 19:59:36 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"nrymarz"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "nrymarz"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 27213)
+
+
+Started POST "/users" for ::1 at 2021-03-03 19:59:37 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"nrymarz", "gamesave"=>{"player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}, "user"=>{"name"=>"nrymarz"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1471)
+
+
+  
+NameError (undefined local variable or method `gamesave' for #<UsersController:0x007f35755119c0>):
+  
+app/controllers/users_controller.rb:38:in `user_params'
+app/controllers/users_controller.rb:13:in `create'
+Started GET "/users" for ::1 at 2021-03-03 20:03:40 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 4.1ms | ActiveRecord: 0.5ms | Allocations: 7059)
+
+
+Started GET "/users/nrymarz" for ::1 at 2021-03-03 20:03:44 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"nrymarz"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "nrymarz"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 23138)
+
+
+Started POST "/users" for ::1 at 2021-03-03 20:03:44 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"nrymarz", "gamesave"=>{"player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}, "user"=>{"name"=>"nrymarz"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "nrymarz"], ["created_at", "2021-03-04 02:03:44.201159"], ["updated_at", "2021-03-04 02:03:44.201159"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mGamesave Create (0.3ms)[0m  [1m[32mINSERT INTO "gamesaves" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 4], ["created_at", "2021-03-04 02:03:44.204451"], ["updated_at", "2021-03-04 02:03:44.204451"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (25.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+Completed 200 OK in 51ms (Views: 0.2ms | ActiveRecord: 26.0ms | Allocations: 10605)
+
+
+Started GET "/users" for ::1 at 2021-03-03 20:03:49 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1021)
+
+
+Started GET "/users/sdfsdf" for ::1 at 2021-03-03 20:04:32 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"sdfsdf"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "sdfsdf"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 27213)
+
+
+Started POST "/users" for ::1 at 2021-03-03 20:04:32 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"sdfsdf", "gamesave"=>{"player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}, "user"=>{"name"=>"sdfsdf"}}
+Completed 500 Internal Server Error in 256698ms (ActiveRecord: 0.7ms | Allocations: 200032)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:16:in `create'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (19.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (20.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20210220033444)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "player" varchar, "inventory" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210220033444"]]
+  [1m[36mTRANSACTION (18.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSaves (20210304005809)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "saves" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "player" varchar, "inventory" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210304005809"]]
+  [1m[36mTRANSACTION (25.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to RemovePlayerandInventoryFromUsers (20210304005920)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "player" varchar DEFAULT NULL, "inventory" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","name","player","inventory","created_at","updated_at")
+                     SELECT "id","name","player","inventory","created_at","updated_at" FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "player" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","name","player","created_at","updated_at")
+                     SELECT "id","name","player","created_at","updated_at" FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "player" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","name","player","created_at","updated_at")
+                     SELECT "id","name","player","created_at","updated_at" FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","name","created_at","updated_at")
+                     SELECT "id","name","created_at","updated_at" FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210304005920"]]
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ChangeSavetoGameSave (20210304012414)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "saves" RENAME TO "gamesaves"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210304012414"]]
+  [1m[36mTRANSACTION (19.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-03-04 02:09:21.572343"], ["updated_at", "2021-03-04 02:09:21.572343"]]
+  [1m[36mTRANSACTION (26.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users" for ::1 at 2021-03-03 20:16:43 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 4390)
+
+
+Started GET "/users/sdf" for ::1 at 2021-03-03 20:16:48 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"sdf"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "sdf"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 23528)
+
+
+Started POST "/users" for ::1 at 2021-03-03 20:16:48 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"sdf", "gamesave"=>{"player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}, "user"=>{"name"=>"sdf"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sdf"], ["created_at", "2021-03-04 02:16:48.906808"], ["updated_at", "2021-03-04 02:16:48.906808"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mGamesave Create (0.2ms)[0m  [1m[32mINSERT INTO "gamesaves" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 1], ["created_at", "2021-03-04 02:16:48.910281"], ["updated_at", "2021-03-04 02:16:48.910281"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (39.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+Completed 200 OK in 70ms (Views: 0.3ms | ActiveRecord: 40.8ms | Allocations: 13221)
+
+
+Started GET "/users" for ::1 at 2021-03-03 20:16:58 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 715)
+
+
+Started GET "/users/nrymarz" for ::1 at 2021-03-03 20:18:43 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"nrymarz"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "nrymarz"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 2409)
+
+
+Started POST "/users" for ::1 at 2021-03-03 20:18:43 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"nrymarz", "gamesave"=>{"player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}, "user"=>{"name"=>"nrymarz"}}
+Completed 500 Internal Server Error in 547613ms (ActiveRecord: 0.2ms | Allocations: 52826)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:14:in `create'
+Started GET "/users" for ::1 at 2021-03-03 20:28:28 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 6892)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-03-03 20:28:37 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 23137)
+
+
+Started POST "/users" for ::1 at 2021-03-03 20:28:37 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Squidbilly", "gamesave"=>{"player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "squidbilly"], ["created_at", "2021-03-04 02:28:37.214943"], ["updated_at", "2021-03-04 02:28:37.214943"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mGamesave Create (0.3ms)[0m  [1m[32mINSERT INTO "gamesaves" ("user_id", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["player", "{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["created_at", "2021-03-04 02:28:37.218012"], ["updated_at", "2021-03-04 02:28:37.218012"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (35.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+Completed 200 OK in 60ms (Views: 0.3ms | ActiveRecord: 36.2ms | Allocations: 10701)
+
+
+Started GET "/users" for ::1 at 2021-03-03 20:28:46 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 808)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mGamesave Load (0.2ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mGamesave Load (0.2ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ? /* loading for inspect */ LIMIT ?[0m  [["user_id", 2], ["LIMIT", 11]]
+Started GET "/users" for ::1 at 2021-03-03 20:31:32 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:9: syntax error, unexpected '}', expecting =>
+... user, :include => {:gamesaves}
+...                              ^
+/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:38: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:9: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:38: syntax error, unexpected end-of-input, expecting end
+app/controllers/users_controller.rb:9: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:38: syntax error, unexpected end-of-input, expecting end
+Started GET "/users" for ::1 at 2021-03-03 20:32:41 -0600
+  
+SyntaxError (/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting end
+        render json: user :include => {:gamesaves}
+                          ^
+/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:9: syntax error, unexpected '}', expecting =>
+...: user :include => {:gamesaves}
+...                              ^
+/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:38: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:9: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:38: syntax error, unexpected end-of-input, expecting end
+app/controllers/users_controller.rb:9: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:9: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:38: syntax error, unexpected end-of-input, expecting end
+Started GET "/users" for ::1 at 2021-03-03 20:33:13 -0600
+  
+SyntaxError (/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:9: syntax error, unexpected '}', expecting =>
+...o_json(:include => {:gamesaves})
+...                              ^
+/home/nrymarz/js-dragon-rpg/dragon-rpg-api/app/controllers/users_controller.rb:38: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:9: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:38: syntax error, unexpected end-of-input, expecting end
+app/controllers/users_controller.rb:9: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:38: syntax error, unexpected end-of-input, expecting end
+Started GET "/users" for ::1 at 2021-03-03 20:33:35 -0600
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 2.2ms | Allocations: 5711)
+
+
+Started GET "/users" for ::1 at 2021-03-03 20:33:46 -0600
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.8ms | Allocations: 4613)
+
+
+Started GET "/users" for ::1 at 2021-03-03 20:34:19 -0600
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mGamesave Load (0.1ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mGamesave Load (0.1ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 1.7ms | Allocations: 12468)
+
+

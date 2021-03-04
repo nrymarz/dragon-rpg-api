@@ -1,18 +1,18 @@
 class UsersController < ApplicationController
     def index
         users = User.all
-        render json: users
+        render json: users, :include => :gamesaves
     end
 
     def show
         user = User.find_by(name: params[:id].parameterize)
-        render json: user
+        render json: user, :include => :gamesaves
     end
 
     def create
         user = User.new(name: user_params[:name])
-        save = Gamesave.new(user_params[:save])
-        user.saves.push(save)
+        save = Gamesave.new(user_params[:gamesave])
+        user.gamesaves.push(save)
         user.name = user.name.parameterize
         if user.save
             render json: user
@@ -22,10 +22,8 @@ class UsersController < ApplicationController
     end
 
     def update
-        user = User.find_by(name: params[:id].parameterize)
+        user = User.find_by(user_params)
         if user
-            save = Gamesave.new(user_params[:save])
-            user.saves.push(save)
             render json: {message: "User updated"},status: 200
         else
             render json: {error: "Unable to update user"}, status: 400
@@ -35,6 +33,6 @@ class UsersController < ApplicationController
     private 
 
     def user_params
-        params.require(:user).permit(:name,save:[:player,:inventory])
+        params.require(:user).permit( :name, :gamesave => [:player,:inventory])
     end
 end
