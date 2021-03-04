@@ -4023,3 +4023,203 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 1.7ms | Allocations: 12468)
 
 
+Started GET "/users/name" for ::1 at 2021-03-03 20:38:56 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"name"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 27258)
+
+
+Started POST "/users" for ::1 at 2021-03-03 20:38:56 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"name", "gamesave"=>{"player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "name"], ["created_at", "2021-03-04 02:38:56.880898"], ["updated_at", "2021-03-04 02:38:56.880898"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mGamesave Create (0.1ms)[0m  [1m[32mINSERT INTO "gamesaves" ("user_id", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["player", "{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["created_at", "2021-03-04 02:38:56.894515"], ["updated_at", "2021-03-04 02:38:56.894515"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (42.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+Completed 200 OK in 83ms (Views: 0.3ms | ActiveRecord: 43.7ms | Allocations: 13374)
+
+
+Started GET "/users" for ::1 at 2021-03-03 20:39:02 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mGamesave Load (0.2ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mGamesave Load (0.1ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mGamesave Load (0.1ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.6ms | Allocations: 3581)
+
+
+Started GET "/users/name" for ::1 at 2021-03-03 20:39:07 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"name"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mGamesave Load (0.1ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1401)
+
+
+Started PATCH "/users/name" for ::1 at 2021-03-03 20:39:41 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"user"=>{"name"=>"name", "gamesave"=>{"player"=>"{\"level\":1,\"hp\":56,\"mana\":20,\"xp\":40,\"speed\":100,\"x\":455.09999999999917,\"y\":308.8,\"img\":{},\"frameIndex\":[2,1],\"frame\":1314,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":1,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}, "id"=>"name"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mGamesave Create (0.2ms)[0m  [1m[32mINSERT INTO "gamesaves" ("user_id", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["player", "{\"level\":1,\"hp\":56,\"mana\":20,\"xp\":40,\"speed\":100,\"x\":455.09999999999917,\"y\":308.8,\"img\":{},\"frameIndex\":[2,1],\"frame\":1314,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":1,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["created_at", "2021-03-04 02:39:41.451877"], ["updated_at", "2021-03-04 02:39:41.451877"]]
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mTRANSACTION (30.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+Completed 200 OK in 37ms (Views: 0.1ms | ActiveRecord: 31.2ms | Allocations: 4130)
+
+
+Started GET "/users/name" for ::1 at 2021-03-03 20:39:46 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"name"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mGamesave Load (0.1ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1514)
+
+
+Started PATCH "/users/name" for ::1 at 2021-03-03 20:43:10 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"user"=>{"name"=>"name", "gamesave"=>{"player"=>"{\"level\":1,\"hp\":56,\"mana\":20,\"xp\":40,\"speed\":100,\"x\":455.09999999999917,\"y\":308.8,\"img\":{},\"frameIndex\":[3,1],\"frame\":1516,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":1,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}, "id"=>"name"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mGamesave Create (0.3ms)[0m  [1m[32mINSERT INTO "gamesaves" ("user_id", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["player", "{\"level\":1,\"hp\":56,\"mana\":20,\"xp\":40,\"speed\":100,\"x\":455.09999999999917,\"y\":308.8,\"img\":{},\"frameIndex\":[3,1],\"frame\":1516,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":1,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["created_at", "2021-03-04 02:43:10.379877"], ["updated_at", "2021-03-04 02:43:10.379877"]]
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+Completed 200 OK in 38ms (Views: 0.2ms | ActiveRecord: 21.2ms | Allocations: 4074)
+
+
+Started GET "/users/name" for ::1 at 2021-03-03 20:43:13 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"name"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mGamesave Load (0.1ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1645)
+
+
+Started GET "/users/name" for ::1 at 2021-03-03 20:43:27 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"name"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mGamesave Load (0.1ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1648)
+
+
+Started POST "/users" for ::1 at 2021-03-03 20:43:27 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"name", "gamesave"=>{"player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "name"], ["created_at", "2021-03-04 02:43:27.188667"], ["updated_at", "2021-03-04 02:43:27.188667"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mGamesave Create (0.2ms)[0m  [1m[32mINSERT INTO "gamesaves" ("user_id", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 4], ["player", "{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["created_at", "2021-03-04 02:43:27.192027"], ["updated_at", "2021-03-04 02:43:27.192027"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (32.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+Completed 200 OK in 41ms (Views: 0.2ms | ActiveRecord: 33.0ms | Allocations: 5242)
+
+
+Started GET "/users" for ::1 at 2021-03-03 20:43:37 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mGamesave Load (0.1ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mGamesave Load (0.1ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mGamesave Load (0.1ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mGamesave Load (0.1ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.7ms | Allocations: 4550)
+
+
+Started GET "/users/name" for ::1 at 2021-03-03 20:44:28 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"name"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mGamesave Load (0.1ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1643)
+
+
+Started GET "/users/poop" for ::1 at 2021-03-03 20:45:03 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"poop"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "poop"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 481)
+
+
+Started POST "/users" for ::1 at 2021-03-03 20:45:03 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"poop", "gamesave"=>{"player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "poop"], ["created_at", "2021-03-04 02:45:03.706665"], ["updated_at", "2021-03-04 02:45:03.706665"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mGamesave Create (0.3ms)[0m  [1m[32mINSERT INTO "gamesaves" ("user_id", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 5], ["player", "{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["created_at", "2021-03-04 02:45:03.710085"], ["updated_at", "2021-03-04 02:45:03.710085"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (46.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+Completed 200 OK in 56ms (Views: 0.2ms | ActiveRecord: 47.5ms | Allocations: 5247)
+
+
+Started PATCH "/users/poop" for ::1 at 2021-03-03 20:45:23 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"user"=>{"name"=>"poop", "gamesave"=>{"player"=>"{\"level\":1,\"hp\":80,\"mana\":50,\"xp\":20,\"speed\":100,\"x\":385.39999999999964,\"y\":300.79999999999995,\"img\":{},\"frameIndex\":[0,1],\"frame\":740,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}, "id"=>"poop"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "poop"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mGamesave Create (0.2ms)[0m  [1m[32mINSERT INTO "gamesaves" ("user_id", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 5], ["player", "{\"level\":1,\"hp\":80,\"mana\":50,\"xp\":20,\"speed\":100,\"x\":385.39999999999964,\"y\":300.79999999999995,\"img\":{},\"frameIndex\":[0,1],\"frame\":740,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":0,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["created_at", "2021-03-04 02:45:23.412385"], ["updated_at", "2021-03-04 02:45:23.412385"]]
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mTRANSACTION (24.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+Completed 200 OK in 31ms (Views: 0.1ms | ActiveRecord: 24.8ms | Allocations: 4679)
+
+
+Started GET "/users/poop" for ::1 at 2021-03-03 20:45:43 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"poop"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "poop"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mGamesave Load (0.1ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1519)
+
+
+Started GET "/users/poop" for ::1 at 2021-03-03 20:46:11 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"poop"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "poop"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mGamesave Load (0.1ms)[0m  [1m[34mSELECT "gamesaves".* FROM "gamesaves" WHERE "gamesaves"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1516)
+
+
