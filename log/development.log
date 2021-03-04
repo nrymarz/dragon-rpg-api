@@ -2859,3 +2859,322 @@ Processing by UsersController#show as */*
 Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 631)
 
 
+Started GET "/users/nrymarz" for ::1 at 2021-02-20 18:55:32 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"nrymarz"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "nrymarz"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 26085)
+
+
+Started POST "/users" for ::1 at 2021-02-20 18:55:32 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"nrymarz", "player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}", "user"=>{"name"=>"nrymarz", "player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "nrymarz"], ["player", "{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["created_at", "2021-02-21 00:55:32.209322"], ["updated_at", "2021-02-21 00:55:32.209322"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (46.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 65ms (Views: 0.3ms | ActiveRecord: 46.9ms | Allocations: 6713)
+
+
+Started PATCH "/users/nrymarz" for ::1 at 2021-02-20 18:56:01 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"name"=>"nrymarz", "player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":422.9000000000014,\"y\":317.9999999999999,\"img\":{},\"frameIndex\":[1,3],\"frame\":949,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":1,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}", "id"=>"nrymarz", "user"=>{"name"=>"nrymarz", "player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":422.9000000000014,\"y\":317.9999999999999,\"img\":{},\"frameIndex\":[1,3],\"frame\":949,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":1,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "nrymarz"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "player" = ?, "inventory" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["player", "{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":422.9000000000014,\"y\":317.9999999999999,\"img\":{},\"frameIndex\":[1,3],\"frame\":949,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":1,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["updated_at", "2021-02-21 00:56:01.615735"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (28.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+Completed 200 OK in 35ms (Views: 0.2ms | ActiveRecord: 28.7ms | Allocations: 4320)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 18:56:04 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 628)
+
+
+Started PATCH "/users/nrymarz" for ::1 at 2021-02-20 18:56:45 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"name"=>"nrymarz", "player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":422.9000000000014,\"y\":317.9999999999999,\"img\":{},\"frameIndex\":[3,3],\"frame\":2338,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":1,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}", "id"=>"nrymarz", "user"=>{"name"=>"nrymarz", "player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":422.9000000000014,\"y\":317.9999999999999,\"img\":{},\"frameIndex\":[3,3],\"frame\":2338,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":1,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "nrymarz"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "player" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["player", "{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":422.9000000000014,\"y\":317.9999999999999,\"img\":{},\"frameIndex\":[3,3],\"frame\":2338,\"touchingEdge\":false}"], ["updated_at", "2021-02-21 00:56:45.970680"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (30.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+Completed 200 OK in 37ms (Views: 0.2ms | ActiveRecord: 30.9ms | Allocations: 4229)
+
+
+Started GET "/users/Squidbilly" for ::1 at 2021-02-20 18:56:56 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Squidbilly"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "squidbilly"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 610)
+
+
+Started GET "/users" for ::1 at 2021-02-20 18:57:03 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 889)
+
+
+Started GET "/users/nrymarz" for ::1 at 2021-02-20 18:57:17 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"nrymarz"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "nrymarz"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 631)
+
+
+Started GET "/users/nrymarz" for ::1 at 2021-02-20 18:57:55 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"nrymarz"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "nrymarz"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started GET "/users/user" for ::1 at 2021-02-20 19:04:06 -0600
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"user"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "user"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 58ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 26083)
+
+
+Started POST "/users" for ::1 at 2021-02-20 19:04:06 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"user", "player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}", "user"=>{"name"=>"user", "player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "user"], ["player", "{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["created_at", "2021-02-21 01:04:06.962899"], ["updated_at", "2021-02-21 01:04:06.962899"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (499.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 512ms (Views: 0.5ms | ActiveRecord: 499.9ms | Allocations: 7317)
+
+
+Started GET "/users/nathan" for ::1 at 2021-02-20 19:08:11 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"nathan"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "nathan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 496)
+
+
+Started POST "/users" for ::1 at 2021-02-20 19:08:12 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"nathan", "player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}", "user"=>{"name"=>"nathan", "player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "nathan"], ["player", "{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["created_at", "2021-02-21 01:08:12.004335"], ["updated_at", "2021-02-21 01:08:12.004335"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (92.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 99ms (Views: 0.3ms | ActiveRecord: 93.2ms | Allocations: 3152)
+
+
+Started GET "/users/name" for ::1 at 2021-02-20 19:11:20 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"name"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 496)
+
+
+Started POST "/users" for ::1 at 2021-02-20 19:11:20 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"name", "player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}", "user"=>{"name"=>"name", "player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name"], ["player", "{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["created_at", "2021-02-21 01:11:20.467932"], ["updated_at", "2021-02-21 01:11:20.467932"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (47.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 58ms (Views: 0.4ms | ActiveRecord: 48.2ms | Allocations: 3755)
+
+
+Started PATCH "/users/name" for ::1 at 2021-02-20 19:12:57 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"name"=>"name", "player"=>"{\"level\":2,\"hp\":114,\"mana\":40,\"xp\":50,\"speed\":100,\"x\":160.50000000000009,\"y\":230.70000000000002,\"img\":{},\"frameIndex\":[3,3],\"frame\":3575,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":1,\"lockOut\":false}", "id"=>"name", "user"=>{"name"=>"name", "player"=>"{\"level\":2,\"hp\":114,\"mana\":40,\"xp\":50,\"speed\":100,\"x\":160.50000000000009,\"y\":230.70000000000002,\"img\":{},\"frameIndex\":[3,3],\"frame\":3575,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":1,\"lockOut\":false}"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "player" = ?, "inventory" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["player", "{\"level\":2,\"hp\":114,\"mana\":40,\"xp\":50,\"speed\":100,\"x\":160.50000000000009,\"y\":230.70000000000002,\"img\":{},\"frameIndex\":[3,3],\"frame\":3575,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":0,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":1,\"lockOut\":false}"], ["updated_at", "2021-02-21 01:12:57.880794"], ["id", 5]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (43.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+Completed 200 OK in 53ms (Views: 0.2ms | ActiveRecord: 43.5ms | Allocations: 4295)
+
+
+Started PATCH "/users/name" for ::1 at 2021-02-20 19:13:01 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"name"=>"name", "player"=>"{\"level\":2,\"hp\":114,\"mana\":40,\"xp\":50,\"speed\":100,\"x\":160.50000000000009,\"y\":230.70000000000002,\"img\":{},\"frameIndex\":[0,3],\"frame\":3622,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":1,\"lockOut\":false}", "id"=>"name", "user"=>{"name"=>"name", "player"=>"{\"level\":2,\"hp\":114,\"mana\":40,\"xp\":50,\"speed\":100,\"x\":160.50000000000009,\"y\":230.70000000000002,\"img\":{},\"frameIndex\":[0,3],\"frame\":3622,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":1,\"lockOut\":false}"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "player" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["player", "{\"level\":2,\"hp\":114,\"mana\":40,\"xp\":50,\"speed\":100,\"x\":160.50000000000009,\"y\":230.70000000000002,\"img\":{},\"frameIndex\":[0,3],\"frame\":3622,\"touchingEdge\":false}"], ["updated_at", "2021-02-21 01:13:01.027410"], ["id", 5]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (70.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+Completed 200 OK in 101ms (Views: 0.2ms | ActiveRecord: 70.9ms | Allocations: 4230)
+
+
+Started GET "/users/name" for ::1 at 2021-02-20 19:13:10 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"name"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 631)
+
+
+Started GET "/users/person" for ::1 at 2021-02-20 19:18:50 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"person"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "person"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 496)
+
+
+Started POST "/users" for ::1 at 2021-02-20 19:18:50 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"person", "player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}", "user"=>{"name"=>"person", "player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "person"], ["player", "{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["created_at", "2021-02-21 01:18:50.896062"], ["updated_at", "2021-02-21 01:18:50.896062"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (215.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 223ms (Views: 0.9ms | ActiveRecord: 215.9ms | Allocations: 4083)
+
+
+Started GET "/users/name1" for ::1 at 2021-02-20 19:20:34 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"name1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 479)
+
+
+Started POST "/users" for ::1 at 2021-02-20 19:20:34 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"name1", "player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}", "user"=>{"name"=>"name1", "player"=>"{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "player", "inventory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name1"], ["player", "{\"level\":1,\"hp\":110,\"mana\":50,\"xp\":0,\"speed\":100,\"x\":380,\"y\":275,\"img\":{},\"frameIndex\":[0,0],\"frame\":0,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":0,\"manaPotions\":0,\"image\":{},\"selectedPotionIndex\":0,\"lockOut\":false}"], ["created_at", "2021-02-21 01:20:34.499319"], ["updated_at", "2021-02-21 01:20:34.499319"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (92.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 105ms (Views: 1.1ms | ActiveRecord: 94.7ms | Allocations: 3145)
+
+
+Started PATCH "/users/name1" for ::1 at 2021-02-20 19:22:13 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"name"=>"name1", "player"=>"{\"level\":2,\"hp\":150,\"mana\":40,\"xp\":50,\"speed\":100,\"x\":389.9,\"y\":313.40000000000015,\"img\":{},\"frameIndex\":[3,0],\"frame\":4078,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":1,\"lockOut\":false}", "id"=>"name1", "user"=>{"name"=>"name1", "player"=>"{\"level\":2,\"hp\":150,\"mana\":40,\"xp\":50,\"speed\":100,\"x\":389.9,\"y\":313.40000000000015,\"img\":{},\"frameIndex\":[3,0],\"frame\":4078,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":1,\"lockOut\":false}"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "player" = ?, "inventory" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["player", "{\"level\":2,\"hp\":150,\"mana\":40,\"xp\":50,\"speed\":100,\"x\":389.9,\"y\":313.40000000000015,\"img\":{},\"frameIndex\":[3,0],\"frame\":4078,\"touchingEdge\":false}"], ["inventory", "{\"healthPotions\":0,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":1,\"lockOut\":false}"], ["updated_at", "2021-02-21 01:22:13.511389"], ["id", 7]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (22.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+Completed 200 OK in 37ms (Views: 0.2ms | ActiveRecord: 23.4ms | Allocations: 4240)
+
+
+Started PATCH "/users/name1" for ::1 at 2021-02-20 19:22:15 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"name"=>"name1", "player"=>"{\"level\":2,\"hp\":150,\"mana\":40,\"xp\":50,\"speed\":100,\"x\":389.9,\"y\":313.40000000000015,\"img\":{},\"frameIndex\":[0,0],\"frame\":4101,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":1,\"lockOut\":false}", "id"=>"name1", "user"=>{"name"=>"name1", "player"=>"{\"level\":2,\"hp\":150,\"mana\":40,\"xp\":50,\"speed\":100,\"x\":389.9,\"y\":313.40000000000015,\"img\":{},\"frameIndex\":[0,0],\"frame\":4101,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":1,\"lockOut\":false}"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "player" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["player", "{\"level\":2,\"hp\":150,\"mana\":40,\"xp\":50,\"speed\":100,\"x\":389.9,\"y\":313.40000000000015,\"img\":{},\"frameIndex\":[0,0],\"frame\":4101,\"touchingEdge\":false}"], ["updated_at", "2021-02-21 01:22:15.028314"], ["id", 7]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (58.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+Completed 200 OK in 69ms (Views: 0.2ms | ActiveRecord: 59.4ms | Allocations: 4229)
+
+
+Started PATCH "/users/name1" for ::1 at 2021-02-20 19:22:15 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"name"=>"name1", "player"=>"{\"level\":2,\"hp\":150,\"mana\":40,\"xp\":50,\"speed\":100,\"x\":389.9,\"y\":313.40000000000015,\"img\":{},\"frameIndex\":[0,0],\"frame\":4104,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":1,\"lockOut\":false}", "id"=>"name1", "user"=>{"name"=>"name1", "player"=>"{\"level\":2,\"hp\":150,\"mana\":40,\"xp\":50,\"speed\":100,\"x\":389.9,\"y\":313.40000000000015,\"img\":{},\"frameIndex\":[0,0],\"frame\":4104,\"touchingEdge\":false}", "inventory"=>"{\"healthPotions\":0,\"manaPotions\":1,\"image\":{},\"selectedPotionIndex\":1,\"lockOut\":false}"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "player" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["player", "{\"level\":2,\"hp\":150,\"mana\":40,\"xp\":50,\"speed\":100,\"x\":389.9,\"y\":313.40000000000015,\"img\":{},\"frameIndex\":[0,0],\"frame\":4104,\"touchingEdge\":false}"], ["updated_at", "2021-02-21 01:22:15.253540"], ["id", 7]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (36.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+Completed 200 OK in 50ms (Views: 0.2ms | ActiveRecord: 37.2ms | Allocations: 4229)
+
+
+Started GET "/users/name1" for ::1 at 2021-02-20 19:22:23 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"name1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "name1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 614)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSaves (20210304005809)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "saves" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "player" varchar, "inventory" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210304005809"]]
+  [1m[36mTRANSACTION (34.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to RemovePlayerandInventoryFromUsers (20210304005920)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "player" varchar DEFAULT NULL, "inventory" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","name","player","inventory","created_at","updated_at")
+                     SELECT "id","name","player","inventory","created_at","updated_at" FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "player" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","name","player","created_at","updated_at")
+                     SELECT "id","name","player","created_at","updated_at" FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "player" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","name","player","created_at","updated_at")
+                     SELECT "id","name","player","created_at","updated_at" FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","name","created_at","updated_at")
+                     SELECT "id","name","created_at","updated_at" FROM "ausers"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210304005920"]]
+  [1m[36mTRANSACTION (27.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
