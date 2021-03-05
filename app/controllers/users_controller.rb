@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     end
 
     def update
-        user = User.find_by(name: user_params[:name])
+        user = User.find_by(name: user_params[:name].parameterize)
         if user
             gamesave = Gamesave.new(user_params[:gamesave])
             user.gamesaves.push(gamesave)
