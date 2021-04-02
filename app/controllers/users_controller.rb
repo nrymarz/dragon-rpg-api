@@ -24,9 +24,10 @@ class UsersController < ApplicationController
     def update
         user = User.find_by(name: user_params[:name].parameterize)
         if user
-            gamesave = Gamesave.new(user_params[:gamesave])
-            user.gamesaves.push(gamesave)
-            user.save
+            #gamesave = Gamesave.new(user_params[:gamesave])
+            #user.gamesaves.push(gamesave)
+            #user.save
+            user.gamesaves.create(user_params)
             render json: {message: "User updated"},status: 200
         else
             render json: {error: "Unable to update user"}, status: 400
